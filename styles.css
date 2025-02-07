@@ -1,0 +1,50 @@
+/* Center the content */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #fce4ec; /* A soft, romantic background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* Create a heart shape */
+.heart {
+  width: 100px;
+  height: 90px;
+  background-color: #e91e63;
+  position: relative;
+  transform: rotate(-45deg);
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 90px;
+  background-color: #e91e63;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  left: 50px;
+  top: 0;
+}
